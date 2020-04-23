@@ -17,33 +17,13 @@ int mode = INTRO;
 //key variables;
 boolean wkey, akey, skey, dkey, spacekey;
 
-//engine variables
-ArrayList<GameObject> objects;
-
-//Game Objects
-Player myPlayer;
-
-//text
-PFont font;
-int shadowOffset = 8;
 
 //#################################### SETUP ###############################################
 
 void setup() {
   //graphics
   size(800, 800);
-  rectMode(CENTER);
   noStroke();
-  
-  //fonts
-  font = createFont("Brightly Crush Shine.otf", 32);
-  textAlign(CENTER, CENTER);
-
-  //initialize engine list
-  objects = new ArrayList<GameObject>();
-  myPlayer = new Player(width/2, height/2, 25, 25, yellow);
-  objects.add(myPlayer);
-  
   
   //initialize key variables
   wkey = akey = skey = dkey = spacekey = false;

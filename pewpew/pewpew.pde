@@ -1,3 +1,7 @@
+//Game Objects
+ArrayList<GameObject> objects;
+Player myPlayer;
+
 //color pallette
 color black  = #000000;
 color white  = #FFFFFF;
@@ -18,15 +22,28 @@ int mode = INTRO;
 boolean wkey, akey, skey, dkey, spacekey;
 
 
+//text
+PFont font;
+int shadowOffset = 8;
+
 //#################################### SETUP ###############################################
 
 void setup() {
   //graphics
   size(800, 800);
+  rectMode(CENTER);
   noStroke();
-  
+
+  //fonts
+  textAlign(CENTER, CENTER);
+
   //initialize key variables
   wkey = akey = skey = dkey = spacekey = false;
+
+  //Game Object initializations
+  objects = new ArrayList<GameObject>();
+  myPlayer = new Player();
+  objects.add(myPlayer);
 }
 
 //##################################### DRAW ################################################
